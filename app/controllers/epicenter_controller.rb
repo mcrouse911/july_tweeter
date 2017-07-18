@@ -40,7 +40,9 @@ end
 
     redirect_to show_user_path(id: params[:id])
 	end
- 
+  def tag_tweets
+    @tag = Tag.find(params[:id])
+  end
  def following
     @user = User.find(params[:id])
     @users = []
